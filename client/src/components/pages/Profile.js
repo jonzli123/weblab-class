@@ -19,6 +19,9 @@ class Profile extends Component {
   }
 
   render() {
+    return (
+      <div className="Profile-container"> Still being developed.</div>
+    )
     if (!this.state.user) {
       return <div className="Profile-container"> Loading! </div>;
     }
