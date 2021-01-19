@@ -27,6 +27,9 @@ class Home extends Component {
     return (
       <div>
         <div className="Home-image"></div>
+        <div className="Home-titleContainer">
+          <h1 className="Home-title">Popular Items</h1>
+        </div>
         <div className="u-flex">
           <Card
             items={this.state.items}

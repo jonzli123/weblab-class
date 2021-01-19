@@ -16,3 +16,14 @@
 
     background-image: url("../../public/shopping.jpg");
 }
+
+.Home-titleContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Home-title {
+    text-align: center;
+    font-size: 60px;
+}
