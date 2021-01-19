@@ -3,8 +3,7 @@ const mongoose = require("mongoose");
 //define a item schema for the database
 const ItemSchema = new mongoose.Schema({
   itemName: String,
-  picture: String,
-  prices: [[String,Number]],
+  prices: [Number],
 });
 
 // compile model from schema

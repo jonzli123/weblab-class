@@ -61,3 +61,30 @@ export function post(endpoint, params = {}) {
       throw `POST request to ${endpoint} failed with error:\n${error}`;
     });
 }
+/*
+export function patch(endpoint, params = {}) {
+  return fetch(endpoint, {
+    method: "PATCH",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify(params),
+  })
+    .then(convertToJSON) // convert result to JSON object
+    .catch((error) => {
+      // give a useful error message
+      throw `PATCH request to ${endpoint} failed with error:\n${error}`;
+    });
+}
+
+export function DELETE(endpoint, params = {}) {
+  const fullPath = endpoint + "?" + formatParams(params);
+  return fetch(fullPath, {
+    method: "DELETE",
+    headers: { "Content-type": "application/json" },
+  })
+    .then(convertToJSON) // convert result to JSON object
+    .catch((error) => {
+      // give a useful error message
+      throw `DELETE request to ${fullPath} failed with error:\n${error}`;
+    });
+}
+*/
