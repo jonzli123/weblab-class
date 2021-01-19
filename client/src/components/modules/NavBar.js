@@ -34,11 +34,13 @@ class NavBar extends Component {
               Home
             </Link>
           </div>
-          {this.props.userId && (
-            <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
-              Profile
-            </Link>
-          )}
+          <div className="NavBar-linkContainer u-inlineBlock">
+            {this.props.userId && (
+              <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
+                Profile
+              </Link>
+            )}
+          </div>
           <div className="ui icon input NavBar-searchContainer u-inlineBlock">
             <input type="text" placeholder="Search..." id="search" onKeyDown={this.getInput}/>
             <i aria-hidden="true" className="search icon"></i>
