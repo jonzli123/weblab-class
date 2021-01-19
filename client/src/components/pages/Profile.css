@@ -1,3 +1,9 @@
+.Profile-container{
+  margin-top: var(--m);
+  display: flex;
+  justify-content: center;
+}
+
 .Profile-avatarContainer {
   padding: 0 35%;
 }
@@ -13,11 +19,6 @@
 
   /* make it a circle */
   border-radius: 50%;
-
-  /* Centering on image`s center*/
-  background-position-y: center;
-  background-position-x: center;
-  background-repeat: no-repeat;
 
   /* it makes the clue thing, takes smaller dimension to fill div */
   background-size: cover;
@@ -54,3 +55,4 @@
   font-size: 24px;
   margin: var(--m) var(--s);
 }
+  

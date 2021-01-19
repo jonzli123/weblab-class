@@ -36,7 +36,7 @@ const socketManager = require("./server-socket");
 // TODO change connection URL after setting up your own database
 const mongoConnectionURL = process.env.ATLAS_SRV;
 // TODO change database name to the name you chose
-const databaseName = "catbook";
+const databaseName = "weblab";
 
 // connect to mongodb
 mongoose

@@ -1,33 +1,27 @@
 .Card-container {
-  border: var(--darkgrey) 1px solid;
-  border-radius: var(--xs);
-  margin-top: var(--m);
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-.Card-container:first-of-type {
-  margin-top: var(--l);
+.Card-item{
+  border: 1px;
+  border-style: solid;
+  padding: var(--m) var(--xl);
+  margin: var(--l) var(--xl);
 }
 
-.Card-story,
-.Card-commentSection {
-  padding: var(--m) var(--l);
-}
-
-.Card-storyUser {
-  font-size: 20px;
+.Card-itemName {
+  text-align: center;
+  margin: var(--m) 0;
+  font-size: 60px;
   font-weight: 600;
 }
 
-.Card-storyContent {
+.Card-itemContent {
+  text-align: center;
   font-size: 40px;
-  margin: var(--s) 0 0;
 }
 
-.Card-commentSection {
-  background-color: var(--grey);
-  border-top: 1px solid var(--darkgrey);
-}
 
-.Card-commentBody {
-  margin: 0 0 var(--s);
-}

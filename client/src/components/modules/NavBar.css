@@ -1,15 +1,23 @@
 .NavBar-container {
   padding: var(--s) var(--m);
   background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
 }
 
 .NavBar-title {
   color: var(--white);
-  font-size: 20px;
+  font-size: 30px;
+}
+
+.NavBar-rightContainer {
+  align-self: center;
 }
 
 .NavBar-linkContainer {
-  margin-left: var(--l);
+  font-size: 20px;
+  align-self: center;
+  margin-right: var(--l);
 }
 
 .NavBar-link,
@@ -29,4 +37,9 @@
 
 .NavBar-link + .NavBar-link {
   margin-left: var(--m);
+}
+
+.NavBar-searchContainer {
+  align-self:center;
+  margin-right: var(--l);
 }

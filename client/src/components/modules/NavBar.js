@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
-
+import { input } from "semantic-ui-react";
+import { navigate } from "@reach/router";
 import "./NavBar.css";
 
 // This identifies your web application to Google's authentication service
@@ -15,22 +16,33 @@ class NavBar extends Component {
     super(props);
   }
 
+  getInput = (e) => {
+    if(e.key === "Enter") {
+      let inp = document.getElementById("search").value;
+      navigate("/display", {state: {search: inp}})
+    }
+  }
+
   render() {
     return (
       <nav className="NavBar-container">
-        <div className="NavBar-title u-inlineBlock">Catbook</div>
-        <div className="NavBar-linkContainer u-inlineBlock">
-          <Link to="/" className="NavBar-link">
-            Home
-          </Link>
-          {this.props.userId && (
-            <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
-              Profile
+        <div className="NavBar-title u-inlineBlock">Price Comp</div>
+
+        <div className = "NavBar-rightContainuer u-inlineBlock">
+          <div className="NavBar-linkContainer u-inlineBlock">
+            <Link to="/" className="NavBar-link">
+              Home
             </Link>
-          )}
-          <Link to="/chat/" className="NavBar-link">
-            Chat
-          </Link>
+            {this.props.userId && (
+              <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
+                Profile
+              </Link>
+            )}
+          </div>
+          <div className="ui icon input NavBar-searchContainer u-inlineBlock">
+            <input type="text" placeholder="Search..." id="search" onKeyDown={this.getInput}/>
+            <i aria-hidden="true" className="search icon"></i>
+          </div>
           {this.props.userId ? (
             <GoogleLogout
               clientId={GOOGLE_CLIENT_ID}
