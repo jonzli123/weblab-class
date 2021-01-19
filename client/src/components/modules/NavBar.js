@@ -6,7 +6,7 @@ import { navigate } from "@reach/router";
 import "./NavBar.css";
 
 // This identifies your web application to Google's authentication service
-const GOOGLE_CLIENT_ID = "395785444978-7b9v7l0ap2h3308528vu1ddnt3rqftjc.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "213750374726-kja9m0927gafs05h0li7uc9jbbmd5i6l.apps.googleusercontent.com";
 
 /**
  * The navigation bar at the top of all pages. Takes no props.
@@ -33,11 +33,6 @@ class NavBar extends Component {
             <Link to="/" className="NavBar-link">
               Home
             </Link>
-            {this.props.userId && (
-              <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
-                Profile
-              </Link>
-            )}
           </div>
           <div className="ui icon input NavBar-searchContainer u-inlineBlock">
             <input type="text" placeholder="Search..." id="search" onKeyDown={this.getInput}/>
